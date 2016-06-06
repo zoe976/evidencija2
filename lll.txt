@@ -1,0 +1,21 @@
++--------+-----------+--------------------------+------------------+-----------------------------------------------------------------+------------+
+| Domain | Method    | URI                      | Name             | Action                                                          | Middleware |
++--------+-----------+--------------------------+------------------+-----------------------------------------------------------------+------------+
+|        | GET|HEAD  | /                        |                  | Closure                                                         | web        |
+|        | GET|HEAD  | home                     |                  | App\Http\Controllers\HomeController@index                       | web,auth   |
+|        | POST      | login                    |                  | App\Http\Controllers\Auth\AuthController@login                  | web,guest  |
+|        | GET|HEAD  | login                    |                  | App\Http\Controllers\Auth\AuthController@showLoginForm          | web,guest  |
+|        | GET|HEAD  | logout                   |                  | App\Http\Controllers\Auth\AuthController@logout                 | web        |
+|        | POST      | password/email           |                  | App\Http\Controllers\Auth\PasswordController@sendResetLinkEmail | web,guest  |
+|        | POST      | password/reset           |                  | App\Http\Controllers\Auth\PasswordController@reset              | web,guest  |
+|        | GET|HEAD  | password/reset/{token?}  |                  | App\Http\Controllers\Auth\PasswordController@showResetForm      | web,guest  |
+|        | GET|HEAD  | register                 |                  | App\Http\Controllers\Auth\AuthController@showRegistrationForm   | web,guest  |
+|        | POST      | register                 |                  | App\Http\Controllers\Auth\AuthController@register               | web,guest  |
+|        | POST      | subjects                 | subjects.store   | App\Http\Controllers\SubjectsControler@store                    | web,auth   |
+|        | GET|HEAD  | subjects                 | subjects.index   | App\Http\Controllers\SubjectsControler@index                    | web,auth   |
+|        | GET|HEAD  | subjects/create          | subjects.create  | App\Http\Controllers\SubjectsControler@create                   | web,auth   |
+|        | DELETE    | subjects/{subjects}      | subjects.destroy | App\Http\Controllers\SubjectsControler@destroy                  | web,auth   |
+|        | PUT|PATCH | subjects/{subjects}      | subjects.update  | App\Http\Controllers\SubjectsControler@update                   | web,auth   |
+|        | GET|HEAD  | subjects/{subjects}      | subjects.show    | App\Http\Controllers\SubjectsControler@show                     | web,auth   |
+|        | GET|HEAD  | subjects/{subjects}/edit | subjects.edit    | App\Http\Controllers\SubjectsControler@edit                     | web,auth   |
++--------+-----------+--------------------------+------------------+-----------------------------------------------------------------+------------+
