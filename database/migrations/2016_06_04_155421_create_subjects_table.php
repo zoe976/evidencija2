@@ -15,6 +15,11 @@ class CreateSubjectsTable extends Migration
         Schema::create('subjects', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name',100);
+            $table->string('tuzilac',100);
+            $table->string('tuzeni',100);
+            $table->string('broj_predmeta',100);
+            $table->string('sudija',100);
+            $table->string('sudnica',100);
             $table->integer('user_id')->unsigned();
             $table->timestamps();
 

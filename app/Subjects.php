@@ -10,7 +10,13 @@ class Subjects extends Model
 
     protected $fillable = [
 
-    	'name'
+    	'name',
+    	'tuzilac',
+    	'tuzeni',
+    	'broj_predmeta',
+    	'sudija',
+    	'sudnica',
+    	'user_id'
 
     ];
 

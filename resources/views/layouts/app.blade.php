@@ -46,11 +46,7 @@
 
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
                 <!-- Left Side Of Navbar -->
-                @if (Auth::user())
-                <ul class="nav navbar-nav">
-                    <li><a href="{{ url('/subjects') }}">Kontrolna tabla</a></li>
-                </ul>
-                @endif
+                
 
                 <!-- Right Side Of Navbar -->
                 <ul class="nav navbar-nav navbar-right">
